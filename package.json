@@ -1,0 +1,23 @@
+{
+  "name": "backend-effect",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "cc": "npx tsc  --watch",
+    "rc": "node dist/cronJob.js",
+    "start": "npx tsx ./src/main.ts",
+    "test": "vitest --test-timeout=15000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "effect": "^3.16.9",
+    "node-cron": "^4.2.1"
+  }
+}

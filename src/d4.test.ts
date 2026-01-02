@@ -10,7 +10,7 @@ const logs: string[] = [];
 const LoggerTest = Layer.succeed(
   Logger,
   Logger.of({
-    log: msg => Effect.sync(() => logs.push(msg)),
+    log: (msg) => Effect.sync(() => logs.push(msg)),
   })
 );
 
@@ -20,11 +20,11 @@ const program = Effect.gen(function* () {
   yield* logger.log(msg);
 });
 
-describe('d4', () => {
+describe('d44', () => {
   it('Logger', () => {
     Effect.runSync(
       Effect.provideService(program, Logger, {
-        log: msg => Effect.sync(() => logs.push(msg)),
+        log: (msg) => Effect.sync(() => logs.push(msg)),
       })
     );
     expect(logs).toEqual(['User logged in']);
